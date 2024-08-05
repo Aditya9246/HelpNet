@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:padding="8dp">
+
+    <ImageView
+        android:id="@+id/orgLogo"
+        android:layout_width="60dp"
+        android:layout_height="60dp"
+        android:src="@drawable/googleg_standard_color_18"
+        android:contentDescription="org_logo" />
+
+    <TextView
+        android:id="@+id/orgName"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Organization Name"
+        android:textSize="16sp"
+        android:textColor="@android:color/black"
+        android:layout_toEndOf="@id/orgLogo"
+        android:layout_alignParentTop="true"
+        android:layout_marginStart="16dp"/>
+
+    <TextView
+        android:id="@+id/orgDescription"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Short description of the organization"
+        android:textSize="14sp"
+        android:textColor="@android:color/black"
+        android:layout_toEndOf="@id/orgLogo"
+        android:layout_below="@id/orgName"
+        android:layout_marginStart="16dp"/>
+</RelativeLayout>

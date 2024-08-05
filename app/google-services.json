@@ -1,0 +1,29 @@
+{
+  "project_info": {
+    "project_number": "210201807593",
+    "project_id": "helpnet-967f6",
+    "storage_bucket": "helpnet-967f6.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:210201807593:android:a0e1ed171dcf9087997e78",
+        "android_client_info": {
+          "package_name": "com.example.helpnet"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCpXpfewe-tDurUq2m_ZirYpwXVb4_gJQk"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

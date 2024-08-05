@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_gravity="bottom">
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="70dp"
+        android:background="#03A9F4" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="horizontal"
+        android:gravity="center">
+
+        <ImageButton
+            android:id="@+id/createPostButton"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:background="@android:color/transparent"
+            android:contentDescription="post tab"
+            android:src="@android:drawable/sym_action_chat"/>
+
+        <ImageButton
+            android:id="@+id/donateButton"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:background="@android:color/transparent"
+            android:contentDescription="donate_tab"
+            android:src="@android:drawable/star_big_on"/>
+
+        <ImageButton
+            android:id="@+id/orgDirectoryButton"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:background="@android:color/transparent"
+            android:contentDescription="resource_tab"
+            android:src="@android:drawable/ic_menu_search" />
+    </LinearLayout>
+</FrameLayout>

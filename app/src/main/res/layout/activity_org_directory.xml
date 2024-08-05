@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <!-- ListView for displaying organizations -->
+    <ListView
+        android:id="@+id/orgListView"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_above="@+id/bottomBarFragment"
+        android:layout_alignParentTop="true"
+        android:padding="16dp" />
+
+    <!-- Placeholder for the BottomBarFragment -->
+    <fragment
+        android:id="@+id/bottomBarFragment"
+        android:name="com.example.helpnet.BottomBarFragment"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true" />
+
+</RelativeLayout>
