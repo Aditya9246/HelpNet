@@ -35,9 +35,14 @@ public class LoginActivity extends Activity {
         Button loginButton = findViewById(R.id.loginButton);
         Button signupButton = findViewById(R.id.signupButton);
 
+        final int[] signUpClickCount = {0};
+
         loginButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
+                if(loginButton.getText().toString().equals("Sign up")){
+                    signUpClickCount[0] += 1;
+                }
                 String email = emailInput.getText().toString();
                 String password = passwordInput.getText().toString();
                 loginUser(email, password);
@@ -47,9 +52,19 @@ public class LoginActivity extends Activity {
         signupButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                String email = emailInput.getText().toString();
-                String password = passwordInput.getText().toString();
-                signupUser(email, password);
+                signUpClickCount[0] += 1;
+
+                if(signUpClickCount[0] % 2 == 0) {
+                    String email = emailInput.getText().toString();
+                    String password = passwordInput.getText().toString();
+                    signupUser(email, password);
+                }
+                else{
+                    newMessage.setVisibility(View.INVISIBLE);
+                    signupButton.setVisibility(View.INVISIBLE);
+                    signupButton.setClickable(false);
+                    loginButton.setText("Sign up");
+                }
             }
         });
     }

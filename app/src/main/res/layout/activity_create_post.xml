@@ -7,6 +7,21 @@
     android:layout_height="match_parent"
     tools:context=".CreatePostActivity">
 
+    <!-- Heading Text -->
+    <TextView
+        android:id="@+id/textViewHeading"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Posts"
+        android:textSize="24sp"
+        android:layout_marginTop="16dp"
+        android:layout_marginBottom="16dp"
+        android:textStyle="bold"
+        android:textColor="#000000"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent" />
+
     <!-- EditText for entering post content -->
     <EditText
         android:id="@+id/editTextPost"
@@ -17,7 +32,7 @@
         android:minLines="4"
         android:gravity="top"
         android:padding="8dp"
-        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/textViewHeading"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintBottom_toTopOf="@+id/buttonAddPost"
@@ -31,25 +46,26 @@
         android:text="Add Post"
         app:layout_constraintTop_toBottomOf="@+id/editTextPost"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintBottom_toTopOf="@+id/postsContainer" />
+        app:layout_constraintEnd_toEndOf="parent" />
 
-    <!-- Container for displaying posts -->
-    <LinearLayout
-        android:id="@+id/postsContainer"
+    <!-- ScrollView containing posts -->
+    <ScrollView
         android:layout_width="0dp"
         android:layout_height="0dp"
-        android:orientation="vertical"
-        android:padding="8dp"
         app:layout_constraintTop_toBottomOf="@+id/buttonAddPost"
         app:layout_constraintBottom_toTopOf="@+id/bottomBarFragment"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        android:background="@android:color/white" >
+        app:layout_constraintEnd_toEndOf="parent">
 
-    </LinearLayout>
-
-    <!-- Existing TextView -->
+        <LinearLayout
+            android:id="@+id/postsContainer"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:padding="8dp"
+            android:background="@android:color/white" >
+        </LinearLayout>
+    </ScrollView>
 
     <!-- Placeholder for the BottomBarFragment -->
     <fragment
